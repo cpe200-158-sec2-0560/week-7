@@ -16,7 +16,11 @@ namespace twozerofoureight
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TwoZeroFourEightView());
+            TwoZeroFourEightView game2048 = new TwoZeroFourEightView();
+            game2048.Show();
+            //Application.Run(new TwoZeroFourEightView());
+            //Application.Run(new Form2());
+            Application.Run();
         }
     }
 }

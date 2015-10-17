@@ -22,6 +22,24 @@ namespace twozerofoureight
             return board;
         }
 
+        public int getScore()
+        {
+            int i, j, total = 0;
+            for (i = 0; i < 4; i++)
+                for (j = 0; j < 4; j++)
+                    total += board[i, j];
+            return total;
+        }
+
+        public bool isLose()
+        {
+            int i, j,total=0;
+            for (i = 0; i < 4; i++)
+                for (j = 0; j < 4; j++)
+                    if (board[i, j] > 0) total++;
+            return total == 16;
+        }
+
         public TwoZeroFourEightModel(int size)
         {
             boardSize = size;
